@@ -446,10 +446,12 @@ export default function KalkulatorSimulasiKredit() {
                   {tenorOptions.map((t) => <option key={t} value={t}>{t} tahun</option>)}
                 </select>
                 {statusKaryawan === "PPPK" && (
-                  <p style={{ margin: "8px 0 0", fontSize: 11, color: "#B45309", lineHeight: 1.55, display: "flex", gap: 6, background: "#FFFBEB", border: "1px solid #FDE68A", borderRadius: 10, padding: "9px 11px" }}>
-                    <AlertTriangle size={13} style={{ flexShrink: 0, marginTop: 1 }} />
-                    Khusus status karyawan <strong>PPPK</strong>, tenor yang dipilih wajib mengikuti sisa masa kontrak kerja dan tidak boleh melebihi jangka waktu kontrak yang berlaku.
-                  </p>
+                  <div style={{ margin: "8px 0 0", display: "flex", gap: 7, background: "#FFFBEB", border: "1px solid #FDE68A", borderRadius: 10, padding: "9px 11px" }}>
+                    <AlertTriangle size={13} color="#B45309" style={{ flexShrink: 0, marginTop: 1 }} />
+                    <span style={{ fontSize: 11, color: "#B45309", lineHeight: 1.55 }}>
+                      Khusus status karyawan <strong>PPPK</strong>, tenor yang dipilih wajib mengikuti sisa masa kontrak kerja dan tidak boleh melebihi jangka waktu kontrak yang berlaku.
+                    </span>
+                  </div>
                 )}
               </Field>
             </div>
